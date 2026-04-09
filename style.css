@@ -201,10 +201,10 @@ header {
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.75rem;
-  border: 2px solid #e8c66a;
+  border: 2px solid #080080;
   border-radius: 8px;
   background: transparent;
-  color: #e8c66a;
+  color: #080080;
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
@@ -216,7 +216,7 @@ header {
   content: '';
   position: absolute;
   inset: 0;
-  background: #e8c66a;
+  background: #080080;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s cubic-bezier(.4,0,.2,1);
