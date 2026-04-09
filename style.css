@@ -217,3 +217,43 @@ footer {
     padding: 50px;
     color: white;
 }
+
+
+/*bouton*/
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border: 2px solid #e8c66a;
+  border-radius: 8px;
+  background: transparent;
+  color: #e8c66a;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.18s ease;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #e8c66a;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  z-index: 0;
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s;
+}
+
+.btn:hover::before { transform: scaleX(1); }
+.btn:hover span    { color: #0d0d0f; }
+.btn:hover         { transform: translateY(-3px); }
