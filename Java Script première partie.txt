@@ -1,11 +1,11 @@
   Java Script
 
 -Menu déroulant sur le cote quand on passe la souris le menu se déroule 
-
+    - Fait
 -Bouton a l'intérieur du menu pour acceder au autre page (actualité, vie scolaire, réseaux sociaux) 
-
--crée un bouton accueil sur la page 
+  (lien)
+-crée un bouton accueil sur la page
 
 -ajouter la fonctionnalité du texte interactif quand l'on clique dessus il nous redirige sur une autre page 
-  
+  (Lien)
  
