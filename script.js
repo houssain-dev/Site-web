@@ -76,7 +76,7 @@ function createMenu() {
     menu.addEventListener('click', (e) => {
         e.stopPropagation();
     });
-}
+}}
 
     }
   function search() {
