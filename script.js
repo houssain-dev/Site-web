@@ -87,8 +87,12 @@ function createMenu() {
     });
 }}
 
+//Bouton page retour Retour
+varBouton_Return=documents.getElementById ('Bouton Retour');
+Bouton_Retour.addEventListener('click',function() {
+   window.history.back();
     
-  }
+  });
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', createMenu);
