@@ -35,7 +35,7 @@ function createMenu() {
         const menuItem = document.createElement('a');
         menuItem.className = 'menu-item' + (item.submenu ? ' has-sub' : '');
         menuItem.textContent = item.text;
-        menuItem.href = item.url;
+        menuItem.href = item.url;}
 
         if (item.submenu) {
             menuItem.addEventListener('mouseenter', (e) => {
