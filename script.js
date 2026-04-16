@@ -35,7 +35,7 @@ function createMenu() {
         const menuItem = document.createElement('a');
         menuItem.className = 'menu-item' + (item.submenu ? ' has-sub' : '');
         menuItem.textContent = item.text;
-        menuItem.href = item.url;}
+        menuItem.href = item.url;
 
         if (item.submenu) {
             menuItem.addEventListener('mouseenter', (e) => {
@@ -56,20 +56,20 @@ function createMenu() {
             menu.appendChild(menuItem);
     });
 
-    // Gestion de l'affichage du menu
-    btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        menu.classList.toggle('show');
+        // Gestion de l'affichage du menu
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menu.classList.toggle('show');
     });
 
-    // Fermeture du menu si clic ailleurs
-    document.addEventListener('click', () => {
+        // Fermeture du menu si clic ailleurs
+        document.addEventListener('click', () => {
         menu.classList.remove('show');
     });
 }
-    // Empêche la fermeture si clic dans le menu
-    menu.addEventListener('click', (e) => {
-        e.stopPropagation();
+        // Empêche la fermeture si clic dans le menu
+        menu.addEventListener('click', (e) => {
+            e.stopPropagation();
     });
 }
   function search() {
