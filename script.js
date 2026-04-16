@@ -50,10 +50,10 @@ const menuData = {
                 subMenuItem.href = subItem.url;
                 submenu.appendChild(subMenuItem);
             });
-                menuItem.appendChild(submenu);
+            menuItem.appendChild(submenu);
         }
 
-                menu.appendChild(menuItem);
+            menu.appendChild(menuItem);
     });
 
             // Gestion de l'affichage du menu
