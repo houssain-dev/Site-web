@@ -9,7 +9,7 @@ const menuData = {
                 { text: "Règlement intérieur", url: "reglement.html" },
                 { text: "Contact", url: "contact-vie-scolaire.html" }
             ]
-        },
+        }},
         {
             text: "Actualités",
             url: "#",
