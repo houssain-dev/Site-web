@@ -13,7 +13,7 @@ const menuData = {
                     submenu: [
                 { text: "Dernières infos", url: "actualites.html" },
                 { text: "Archives", url: "archives.html" },
-                { text: "Événements", url: "evenements.html" },
+                { text: "Événements", url: "evenements.html"},
                 { text: "Contact", url: "contact.html" },
             ]
         ]
@@ -53,7 +53,7 @@ function createMenu() {
             menuItem.appendChild(submenu);
         }
 
-        menu.appendChild(menuItem);
+            menu.appendChild(menuItem);
     });
 
     // Gestion de l'affichage du menu
@@ -71,7 +71,7 @@ function createMenu() {
     menu.addEventListener('click', (e) => {
         e.stopPropagation();
     });
-}}
+}
   function search() {
     const query = document.getElementById("searchInput").value;
     if (query) {
@@ -84,8 +84,7 @@ function createMenu() {
 varBouton_Return=documents.getElementById ('Bouton Retour');
 Bouton_Retour.addEventListener('click',function() {
    window.history.back();
-    
-  });
+    });
 }
 
 // Initialisation
