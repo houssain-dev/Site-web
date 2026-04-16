@@ -66,7 +66,7 @@ function createMenu() {
     document.addEventListener('click', () => {
         menu.classList.remove('show');
     });
-
+}
     // Empêche la fermeture si clic dans le menu
     menu.addEventListener('click', (e) => {
         e.stopPropagation();
