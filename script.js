@@ -2,10 +2,9 @@
 const menuData = {
     items: [
         { text: "Accueil", url: "index.html" },
-        {
-            text: "Vie scolaire",
-            url: "#",
-            submenu: [
+        {text: "Vie scolaire",
+             url: "#",
+             submenu: [
                 { text: "Emploi du temps", url: "emploi-du-temps.html" },
                 { text: "Règlement intérieur", url: "reglement.html" },
                 { text: "Contact", url: "contact-vie-scolaire.html" }
@@ -77,8 +76,6 @@ function createMenu() {
         e.stopPropagation();
     });
 }}
-
-  }
   function search() {
     const query = document.getElementById("searchInput").value;
     if (query) {
@@ -86,14 +83,14 @@ function createMenu() {
       // Exemple : redirection vers Google
       // window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
     }
-
+      
 //Bouton page retour Retour
 varBouton_Return=documents.getElementById ('Bouton Retour');
 Bouton_Retour.addEventListener('click',function() {
    window.history.back();
     
   });
-  }
+}
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', createMenu);
