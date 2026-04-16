@@ -1,14 +1,5 @@
 
 const menuData = {
-   }
-  function search() {
-    const query = document.getElementById("searchInput").value;
-    if (query) {
-      alert("Tu as recherché : " + query);
-      // Exemple : redirection vers Google
-      // window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
-    }
-    
     items: [
         { text: "Accueil", url: "index.html" },
         {
@@ -86,6 +77,15 @@ function createMenu() {
         e.stopPropagation();
     });
 }}
+
+  }
+  function search() {
+    const query = document.getElementById("searchInput").value;
+    if (query) {
+      alert("Tu as recherché : " + query);
+      // Exemple : redirection vers Google
+      // window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
+    }
 
 //Bouton page retour Retour
 varBouton_Return=documents.getElementById ('Bouton Retour');
