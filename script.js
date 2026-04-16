@@ -79,12 +79,6 @@ function createMenu() {
       // Exemple : redirection vers Google
       // window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
     }
-      
-//Bouton page retour Retour
-varBouton_Return=documents.getElementById ('Bouton Retour');
-Bouton_Retour.addEventListener('click',function() {
-   window.history.back();
-    });
 }
 
 // Initialisation
