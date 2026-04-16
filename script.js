@@ -6,13 +6,11 @@ const menuData = {
              submenu: [
                 { text: "Emploi du temps", url: "emploi-du-temps.html" },
                 { text: "Règlement intérieur", url: "reglement.html" },
-                { text: "Contact", url: "contact-vie-scolaire.html" }
+                { text: "Contact", url: "contact-vie-scolaire.html" },
             ]
-        },
-        {
-            text: "Actualités",
-            url: "#",
-            submenu: [
+        
+                {text: "Actualités",url: "#"},
+                    submenu: [
                 { text: "Dernières infos", url: "actualites.html" },
                 { text: "Archives", url: "archives.html" }
             ]
