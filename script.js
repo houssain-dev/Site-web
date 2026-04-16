@@ -19,57 +19,57 @@ const menuData = {
         ]
 };
 {
-// Création dynamique du menu
-function createMenu() {
-    const container = document.getElementById('menu-container');
-    const btn = document.createElement('button');
-    btn.className = 'menu-btn';
-    btn.textContent = 'Menu';
-    container.appendChild(btn);
+        // Création dynamique du menu
+        function createMenu() {
+            const container = document.getElementById('menu-container');
+            const btn = document.createElement('button');
+            btn.className = 'menu-btn';
+            btn.textContent = 'Menu';
+            container.appendChild(btn);
 
-    const menu = document.createElement('div');
-    menu.className = 'menu';
-    container.appendChild(menu);
+            const menu = document.createElement('div');
+            menu.className = 'menu';
+            container.appendChild(menu);
 
-    menuData.items.forEach(item => {
-        const menuItem = document.createElement('a');
-        menuItem.className = 'menu-item' + (item.submenu ? ' has-sub' : '');
-        menuItem.textContent = item.text;
-        menuItem.href = item.url;
+            menuData.items.forEach(item => {
+                const menuItem = document.createElement('a');
+                menuItem.className = 'menu-item' + (item.submenu ? ' has-sub' : '');
+                menuItem.textContent = item.text;
+                menuItem.href = item.url;
 
-        if (item.submenu) {
-            menuItem.addEventListener('mouseenter', (e) => {
-                e.preventDefault();
+            if (item.submenu) {
+                menuItem.addEventListener('mouseenter', (e) => {
+                    e.preventDefault();
             });
-            const submenu = document.createElement('div');
-            submenu.className = 'submenu';
-            item.submenu.forEach(subItem => {
+                const submenu = document.createElement('div');
+                submenu.className = 'submenu';
+                item.submenu.forEach(subItem => {
                 const subMenuItem = document.createElement('a');
                 subMenuItem.className = 'menu-item';
                 subMenuItem.textContent = subItem.text;
                 subMenuItem.href = subItem.url;
                 submenu.appendChild(subMenuItem);
             });
-            menuItem.appendChild(submenu);
+                menuItem.appendChild(submenu);
         }
 
-            menu.appendChild(menuItem);
+                menu.appendChild(menuItem);
     });
 
-        // Gestion de l'affichage du menu
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            menu.classList.toggle('show');
+            // Gestion de l'affichage du menu
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menu.classList.toggle('show');
     });
 
-        // Fermeture du menu si clic ailleurs
-        document.addEventListener('click', () => {
-        menu.classList.remove('show');
+            // Fermeture du menu si clic ailleurs
+            document.addEventListener('click', () => {
+            menu.classList.remove('show');
     });
 }
-        // Empêche la fermeture si clic dans le menu
-        menu.addEventListener('click', (e) => {
-            e.stopPropagation();
+            // Empêche la fermeture si clic dans le menu
+            menu.addEventListener('click', (e) => {
+                e.stopPropagation();
     });
 }
   function search() {
