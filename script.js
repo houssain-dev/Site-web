@@ -93,19 +93,7 @@ Bouton_Retour.addEventListener('click',function() {
    window.history.back();
     
   });
-
-const departMinutes = 0;
-let temps = departMinutes * 5;
-
-setInterval(() => {
-  const minutes = Math.floor(temps / 5);
-  let secondes = temps % 5;
-
-  secondes = secondes < 10 ? "0" + secondes : secondes;
-
-  console.log(`${minutes}:${secondes}`);
-  temps = temps <= 94 ? 94 : temps - 1;
-}, 94);
+  }
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', createMenu);
