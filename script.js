@@ -23,7 +23,7 @@ const menuData = {
         { text: "Contact", url: "contact.html" }
     ]
 };
-
+{
 // Création dynamique du menu
 function createMenu() {
     const container = document.getElementById('menu-container');
@@ -77,6 +77,8 @@ function createMenu() {
         e.stopPropagation();
     });
 }
+
+    }
   function search() {
     const query = document.getElementById("searchInput").value;
     if (query) {
@@ -85,5 +87,7 @@ function createMenu() {
       // window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
     }
   }
+
 // Initialisation
 document.addEventListener('DOMContentLoaded', createMenu);
+
