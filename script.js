@@ -12,12 +12,11 @@ const menuData = {
                 {text: "Actualités",url: "#"},
                     submenu: [
                 { text: "Dernières infos", url: "actualites.html" },
-                { text: "Archives", url: "archives.html" }
+                { text: "Archives", url: "archives.html" },
+                { text: "Événements", url: "evenements.html" },
+                { text: "Contact", url: "contact.html" }
             ]
-        },
-        { text: "Événements", url: "evenements.html" },
-        { text: "Contact", url: "contact.html" }
-    ]
+        ]
 };
 {
 // Création dynamique du menu
