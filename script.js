@@ -2,14 +2,13 @@
 const menuData = {
     items: [
         { text: "Accueil", url: "index.html" },
-        {text: "Vie scolaire",
-             url: "#",
+        {text: "Vie scolaire", url: "#"},
              submenu: [
                 { text: "Emploi du temps", url: "emploi-du-temps.html" },
                 { text: "Règlement intérieur", url: "reglement.html" },
                 { text: "Contact", url: "contact-vie-scolaire.html" }
             ]
-        }},
+        },
         {
             text: "Actualités",
             url: "#",
