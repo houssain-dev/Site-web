@@ -85,15 +85,5 @@ function createMenu() {
       // window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
     }
   }
-
-    }
-  function search() {
-    const query = document.getElementById("searchInput").value;
-    if (query) {
-      alert("Tu as recherché : " + query);
-      // Exemple : redirection vers Google
-      // window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
-    }
-
 // Initialisation
 document.addEventListener('DOMContentLoaded', createMenu);
