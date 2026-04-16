@@ -86,7 +86,7 @@ function createMenu() {
     }
   }
 
-        }
+    }
   function search() {
     const query = document.getElementById("searchInput").value;
     if (query) {
