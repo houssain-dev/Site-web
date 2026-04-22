@@ -15,6 +15,17 @@ header {
     height: 80px;
     text-align: center;
     font-weight: bold;
+
+    .logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: white;
+}
+
+.logo-container img {
+    height: 80px;
+    width: auto;
 }
 
 /* ---- MENU ---- */
