@@ -15,8 +15,9 @@ header {
     height: 80px;
     text-align: center;
     font-weight: bold;
+}
 
-    .logo-container {
+.logo-container {
     display: flex;
     justify-content: center;
     padding: 15px 0;
