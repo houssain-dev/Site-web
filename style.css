@@ -296,3 +296,29 @@ footer {
     width: 100px;
     height: 50px;
 }
+ /* barre complète */
+.menu-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* liens */
+.menu-top a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.menu-top a:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 8px;
+}
+
+/* logo au milieu */
+.logo img {
+    height: 100px;
+}
