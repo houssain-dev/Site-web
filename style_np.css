@@ -43,63 +43,6 @@ img {
   object-fit: cover;
 }
 
-/* ── TOPBAR ─────────────────────────────────────────────── */
-.topbar {
-  background: var(--topbar-bg);
-  color: var(--topbar-text);
-  font-size: 0.78rem;
-  padding: 6px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.topbar-left {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.topbar-left span {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  opacity: .9;
-}
-
-.topbar-right {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.topbar-right a {
-  color: var(--topbar-text);
-  font-weight: 600;
-  opacity: .85;
-  transition: opacity var(--transition);
-}
-.topbar-right a:hover { opacity: 1; }
-
-.topbar-right input[type="search"] {
-  background: rgba(255,255,255,.12);
-  border: 1px solid rgba(255,255,255,.25);
-  border-radius: 20px;
-  padding: 3px 12px;
-  color: #fff;
-  font-size: .78rem;
-  outline: none;
-  width: 140px;
-  transition: background var(--transition), width var(--transition);
-}
-.topbar-right input[type="search"]::placeholder { color: rgba(255,255,255,.6); }
-.topbar-right input[type="search"]:focus {
-  background: rgba(255,255,255,.22);
-  width: 180px;
-}
-
 /* ── NAVBAR ─────────────────────────────────────────────── */
 .navbar {
   background: var(--white);
