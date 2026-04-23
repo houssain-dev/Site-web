@@ -1,16 +1,18 @@
-const departMinutes = 0
-let temps = departMinutes * 60
+consttimerElement:{
 
-const timerElement = document.getElementById("timer")
+  departMinutes = 0
+  let temps = departMinutes * 60
 
-setInterval(() => {
-  let minutes = parseInt(temps / 60, 10)
-  let secondes = parseInt(temps % 60, 10)
+  const timerElement = document.getElementById("timer")
 
-  minutes = minutes < 10 ? "0" + minutes : minutes
-  secondes = secondes < 10 ? "0" + secondes : secondes
+  setInterval(() => {
+    let minutes = parseInt(temps / 60, 10)
+    let secondes = parseInt(temps % 60, 10)
 
-  timerElement.innerText = `${minutes}:${secondes}`
-  temps = temps <= 0 ? 0 : temps + 1
-}, 1000)
+    minutes = minutes < 10 ? "0" + minutes : minutes
+    secondes = secondes < 10 ? "0" + secondes : secondes
 
+    timerElement.innerText = `${minutes}:${secondes}`
+    temps = temps <= 0 ? 0 : temps + 1
+  }, 1000)
+}
