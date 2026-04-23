@@ -1,15 +1,15 @@
 /* ============================================================
-   LYCÉE USLET GEOFFROY – Feuille de styles principale
-   style.css
+   LYCÉE LISLET GEOFFROY – Feuille de styles principale
+   style_np.css
    ============================================================ */
 
 /* ── Variables ──────────────────────────────────────────── */
 :root {
-  --blue-dark:   #1a2e4a;   /* bleu marine titre navbar */
-  --blue-mid:    #2e4e7e;   /* bleu moyen liens actifs  */
-  --teal-card:   #a8ccd7;   /* fond carte (turquoise clair) */
+  --blue-dark:   #1a2e4a;
+  --blue-mid:    #2e4e7e;
+  --teal-card:   #a8ccd7;
   --teal-hover:  #8fbccb;
-  --orange-bar:  #e8882a;   /* barre accent titre        */
+  --orange-bar:  #e8882a;
   --white:       #ffffff;
   --text-dark:   #1c1c1c;
   --text-muted:  #4a4a4a;
@@ -34,7 +34,14 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Règle générale pour les images (PAS le logo) */
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* ── TOPBAR ─────────────────────────────────────────────── */
 .topbar {
@@ -132,7 +139,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .nav-links a:hover { color: var(--blue-mid); }
 .nav-links a:hover::after { width: 100%; }
 
-/* Logo centré */
+/* ── LOGO (conteneur centré) ─────────────────────────────── */
 .logo-wrap {
   display: flex;
   flex-direction: column;
@@ -141,10 +148,11 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   min-width: 100px;
 }
 
-.logo-wrap .logo {
-  width: 20px !important;
-  height: 20px !important;
-  object-fit: contain;
+/* On cible uniquement l'img à l'intérieur de logo-wrap */
+.logo-wrap img {
+  width: 55px !important;
+  height: 55px !important;
+  object-fit: contain !important;
   border-radius: 50%;
 }
 
@@ -218,7 +226,6 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   box-shadow: 0 10px 28px rgba(0,0,0,.18);
 }
 
-/* Image area */
 .card-img {
   height: 230px;
   overflow: hidden;
@@ -226,11 +233,14 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 
 .card-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
   transition: transform .4s ease;
 }
 .card:hover .card-img img { transform: scale(1.04); }
 
-/* Card body */
 .card-body {
   padding: 22px 22px 20px;
   display: flex;
@@ -255,7 +265,6 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   flex: 1;
 }
 
-/* Lire la suite */
 .read-more {
   display: inline-block;
   font-size: .8rem;
@@ -282,7 +291,6 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .card:hover .read-more { color: var(--blue-mid); }
 .card:hover .read-more::after { transform: scaleX(1.15); background: var(--orange-bar); }
 
-/* Date */
 .card-date {
   font-size: .78rem;
   color: var(--text-muted);
