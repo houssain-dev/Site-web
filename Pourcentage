@@ -1,6 +1,4 @@
-consttimerElement={
-
-  departMinutes = 0
+const departMinutes = 0
   let temps = departMinutes * 60
 
   const timerElement = document.getElementById("timer")
