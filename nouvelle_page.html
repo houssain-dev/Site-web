@@ -1,11 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Nouvelle page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lycée Uslet Geoffroy – Actualités & Événements</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <h1>Bienvenue sur la nouvelle page !</h1>
-    <button onclick="window.location.href='index.html'">Retour</button>
+
+  <!-- ──────────────── TOPBAR ──────────────── -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span>📞 0262 907 200</span>
+      <span>✉️ ce.9740054r@ac-reunion.fr</span>
+      <span>📍 15 rue Christol de Sigoyer BP 50002 Sainte-Clotilde CEDEX 97491 La Réunion</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#">in</a>
+      <a href="#">▶</a>
+      <input type="search" placeholder="Recherche…" />
+    </div>
+  </div>
+
+  <!-- ──────────────── NAVBAR ──────────────── -->
+  <header class="navbar">
+    <nav class="nav-links nav-left">
+      <a href="#">L'établissement</a>
+      <a href="#">Catalogue de formations</a>
+      <a href="#">Vie du lycée</a>
+    </nav>
+
+    <div class="logo-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Coat_of_arms_of_R%C3%A9union.svg/120px-Coat_of_arms_of_R%C3%A9union.svg.png" alt="Logo lycée" class="logo" />
+      <span class="logo-text">LYCÉE USLET<br/>GEOFFROY</span>
+    </div>
+
+    <nav class="nav-links nav-right">
+      <a href="#">Actualités</a>
+      <a href="#">Échanges internationaux</a>
+      <a href="#">Espace parent</a>
+    </nav>
+  </header>
+
+  <!-- ──────────────── HERO SECTION ──────────────── -->
+  <section class="hero">
+    <h1>Actualités &amp; événements <span class="accent-bar"></span></h1>
+    <p>Restez connectés à la vie de l'établissement grâce à nos actualités et au calendrier des événements à venir. Suivez les temps forts, les réussites et les projets qui rythment la vie du lycée.</p>
+  </section>
+
+  <!-- ──────────────── NEWS GRID ──────────────── -->
+  <main class="news-grid">
+
+    <!-- Card 1 -->
+    <article class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Saint-Denis" />
+      </div>
+      <div class="card-body">
+        <h2>🇪🇸 ERASMUS+ : DES ÉTUDIANTS DE BTS CRSA ET MS CONÇOIVENT UNE BROCHURE TOURISTIQUE DE SAINT-DENIS EN ESPAGNOL !</h2>
+        <p>Les étudiants impliqués dans le cours « Coaching Mobilité Erasmus+ » ont activement participé à l'accueil de nos collègues Espagnols en animant une visite guidée de la ville de Saint-Denis. En amont, ils ont élaboré en classe un document de présentation des lieux incontournables du…</p>
+        <a href="#" class="read-more">LIRE LA SUITE</a>
+        <time class="card-date">20/04/2026</time>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80" alt="Lycéens" />
+      </div>
+      <div class="card-body">
+        <h2>🧗 DES LYCÉENS ENCORDÉS DE L'EST DÉCOUVRENT NOS FORMATIONS SUPÉRIEURES !</h2>
+        <p>Ce jeudi 16 avril 2026, notre Cordée de la Réussite « Avenir Ingénieur » organisait sa journée cordée à destination des lycéens de l'île. Cinq établissements ont répondu présents : les lycées Bel Air, Paul Moreau, Sarda Garriga, Jean-Claude Fruteau et Julien de Rontaunay.</p>
+        <a href="#" class="read-more">LIRE LA SUITE</a>
+        <time class="card-date">20/04/2026</time>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80" alt="Erasmus élève" />
+      </div>
+      <div class="card-body">
+        <h2>🇪🇸 ERASMUS+ : UNE ÉLÈVE DE 1STI2D3 PUBLIE SON ARTICLE SUR LA VISITE DES ESPAGNOLS !</h2>
+        <p>Alexandra a été sélectionnée (avec ses camarades Benoit, Cassydie, Héloïse et Lucas) pour participer au projet Erasmus KA210 « From Prototyping to Manufacturing: A Shared Project ». Elle nous propose ci-dessous un article écrit à l'occasion de la visite des enseignants espagnols.</p>
+        <a href="#" class="read-more">LIRE LA SUITE</a>
+        <time class="card-date">20/04/2026</time>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ──────────────── FOOTER ──────────────── -->
+  <footer class="footer">
+    <p>© 2026 Lycée Uslet Geoffroy – La Réunion | <a href="#">Mentions légales</a> | <a href="#">Accessibilité</a></p>
+  </footer>
+
 </body>
 </html>
