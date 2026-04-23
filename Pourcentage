@@ -1,0 +1,8 @@
+<body>
+    <div id="pourcentage"></div>
+    <script>
+      let temps = 1;
+      const timerElement = document.getElementById("pourcentage");
+      timerElement.innerText = temps;
+    </script>
+</body>
