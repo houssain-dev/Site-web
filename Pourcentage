@@ -56,19 +56,16 @@
   <div class="stats">
     <div class="stat">
       <div class="number" data-target="94">0</div>
-      <div class=counter.textContent = Math.floor(easeOut * target) + "%";</div>
       <div class="label">De réussite au bac</div>
     </div>
 
     <div class="stat">
       <div class="number" data-target="8">0</div>
-      <div class=counter.textContent = Math.floor(easeOut * target) + "%";</div>
       <div class="label">Formations Post-Bacs</div>
     </div>
 
     <div class="stat">
       <div class="number" data-target="1160">0</div>
-      <div class=counter.textContent = Math.floor(easeOut * target) + "%";</div>
       <div class="label">Élèves et étudiants</div>
     </div>
   </div>
