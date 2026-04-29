@@ -1,172 +1,118 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Compte à rebours JavaScript</title>
-        <style>
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-                background-color: #0f172a;
-                color: #ffffff;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                flex-direction: column;
-                margin: 0;
-            }
+<head>
+  <meta charset="UTF-8">
+  <title>Pourcentage</title>
+  <style>
+    body {
+        #CSS
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+    }
 
-            h1 {
-                margin-bottom: 40px;
-                font-size: 24px;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-            }
+    section {
+      padding: 100px 20px;
+      text-align: center;
+    }
 
-            .countdown {
-                display: flex;
-                gap: 20px;
-            }
+    h2 {
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+    }
 
-            .time {
-                background-color: #020617;
-                padding: 20px;
-                border-radius: 6px;
-                text-align: center;
-                min-width: 90px;
-            }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
 
-            .time span {
-                display: block;
-                font-size: 36px;
-                font-weight: bold;
-            }
+    .stat {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 150px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
 
-            .time small {
-                font-size: 12px;
-                opacity: 0.7;
-            }
+    .number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #2c7be5;
+    }
 
-            .number {
-                height: 40px;
-                overflow: hidden;
-            }
+    .label {
+      margin-top: 10px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
 
-            .number span {
-                display: block;
-                transition: transform 0.4s ease-in-out;
-            }
-        </style>
-    </head>
-    <body>
+<section>
+  <h2>Lycée en chiffres</h2>
 
-    <h1>Compte à rebours avant le 01 Janvier 2027 :</h1>
-    <div class="countdown">
-        <div class="time">
-            <div class="number">
-                <span id="days" aria-label="Jours restants">00</span>
-            </div>
-            <small>Jours</small>
-        </div>
-
-        <div class="time">
-            <div class="number">
-                <span id="hours" aria-label="Heures restantes">00</span>
-            </div>
-            <small>Heures</small>
-        </div>
-
-        <div class="time">
-            <div class="number">
-                <span id="minutes" aria-label="Minutes restantes">00</span>
-            </div>
-            <small>Minutes</small>
-        </div>
-
-        <div class="time">
-            <div class="number" aria-label="Secondes restantes">
-                <span id="seconds">00</span>
-            </div>
-            <small>Secondes</small>
-        </div>
+  <div class="stats">
+    <div class="stat">
+      <div class="number" data-target="94">0</div>
+      <div class=counter.textContent = Math.floor(easeOut * target) + "%";</div>
+      <div class="label">De réussite au bac</div>
     </div>
 
-    <script>
-        const daysElement = document.getElementById("days");
-        const hoursElement = document.getElementById("hours");
-        const minutesElement = document.getElementById("minutes");
-        const secondsElement = document.getElementById("seconds");
+    <div class="stat">
+      <div class="number" data-target="8">0</div>
+      <div class=counter.textContent = Math.floor(easeOut * target) + "%";</div>
+      <div class="label">Formations Post-Bacs</div>
+    </div>
 
-        const targetDate = new Date(
-            2027,
-            0,
-            1,
-            0,
-            0,
-            0
-        );
+    <div class="stat">
+      <div class="number" data-target="1160">0</div>
+      <div class=counter.textContent = Math.floor(easeOut * target) + "%";</div>
+      <div class="label">Élèves et étudiants</div>
+    </div>
+  </div>
+</section>
 
-        let previousDays;
-        let previousHours;
-        let previousMinutes;
-        let previousSeconds;
+<script>
+  const counters = document.querySelectorAll('.number');
+  let started = false;
 
-        function formatNumber(number) {
-            return number < 10 ? "0" + number : number;
+  function animateCounters() {
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      const duration = 1200;
+      const startTime = performance.now();
+
+      function update(time) {
+        const progress = Math.min((time - startTime) / duration, 1);
+        
+        // easing (accélération douce)
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+
+        counter.textContent = Math.floor(easeOut * target);
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target;
         }
+      }
 
-        function animateChange(element, value, previousValue) {
-            if (value === previousValue) {
-                return;
-            }
+      requestAnimationFrame(update);
+    });
+  }
 
-            element.style.transition = "transform 0.2s ease-in, opacity 0.2s ease-in";
-            element.style.transform = "translateY(-100%)";
-            element.style.opacity = "0";
+  // déclenchement au scroll
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !started) {
+      animateCounters();
+      started = true;
+    }
+  });
 
-            setTimeout(() => {
-                element.textContent = formatNumber(value);
-                
-                element.style.transition = "none";
-                element.style.transform = "translateY(100%)";
-                
-                void element.offsetWidth; // Force le recalcul pour l'effet instantané
-                
-                element.style.transition = "transform 0.2s ease-out, opacity 0.2s ease-out";
-                element.style.transform = "translateY(0)";
-                element.style.opacity = "1";
-            }, 200);
-        }
+  observer.observe(document.querySelector('.stats'));
+</script>
 
-        function updateCountdown() {
-            const currentDate = new Date();
-            const difference = targetDate - currentDate;
-
-            if (difference <= 0) {
-                clearInterval(timer);
-                document.querySelector(".countdown").textContent =
-                    "Le compte à rebours est terminé";
-                return;
-            }
-
-            const seconds = Math.floor(difference / 1000) % 60;
-            const minutes = Math.floor(difference / 1000 / 60) % 60;
-            const hours = Math.floor(difference / 1000 / 60 / 60) % 24;
-            const days = Math.floor(difference / 1000 / 60 / 60 / 24);
-
-            animateChange(daysElement, days, previousDays);
-            animateChange(hoursElement, hours, previousHours);
-            animateChange(minutesElement, minutes, previousMinutes);
-            animateChange(secondsElement, seconds, previousSeconds);
-
-            previousDays = days;
-            previousHours = hours;
-            previousMinutes = minutes;
-            previousSeconds = seconds;
-        }
-
-        const timer = setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
-    </body>
+</body>
 </html>
