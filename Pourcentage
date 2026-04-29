@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Pourcentage</title>
+  <title>Lycée en chiffres</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -55,12 +55,12 @@
   <div class="stats">
     <div class="stat">
       <div class="number" data-target="94">0</div>
-      <div class="label">De réussite au bac</div>
+      <div class="label">Réussite au bac</div>
     </div>
 
     <div class="stat">
       <div class="number" data-target="8">0</div>
-      <div class="label">Formations Post-Bacs</div>
+      <div class="label">Formations post_bac</div>
     </div>
 
     <div class="stat">
