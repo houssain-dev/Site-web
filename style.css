@@ -10,7 +10,10 @@
   gap: 12px;
   flex-wrap: wrap;
 }
-
+body {
+    font-family: "Optima", sans-serif;
+    margin: 20px;
+}
 #menu-container {
     position: relative;
     display: inline-block;
@@ -87,11 +90,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
 }
 
 header {
