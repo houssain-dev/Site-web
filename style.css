@@ -321,3 +321,36 @@ footer {
 .logo img {
     height: 100px;
 }
+
+/* pourcentage */  
+    h2 {
+    font-size: 2.5rem;
+    text-align: center;
+
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .stat-r {
+        color: orange
+      }
+    .stat-f {
+        color: bleu
+      }
+    .stat-e {
+        color: bleu
+      }
+    .number {
+      font-size: 3rem;
+    }
+
+    .label {
+      margin-top: 10px;
+      color: black
+
+    }
