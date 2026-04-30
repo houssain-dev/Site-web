@@ -406,62 +406,65 @@ footer {
     transform: scale(1.02);
     transition: 0.3s;
 }
-li {
-list-style:none !important; /*On enlève les puces de la liste */
-color:black;
-padding: 10px 20px;
-font-size:10px;
-text-decoration:none;
-
-}
- 
-nav ul {
-background-color:blue;
-padding:0;
-margin:0;
-}
- 
-nav ul li {
-list-style: none;
-line-height:44px;
-float:left;
-background-color:rgba(30, 28, 95);
-}
- 
-nav ul li a {
-color:white;
-padding:10px;
-font-size:20px;
-text-decoration:none;
-}
- 
-li a:hover {
-background-color: rgba(255,255,255,0.2);
-border-radius: 8px;
+.wrapper {
+	display: flex;
+	font-size: 18px;
+	height: 10vh;
 }
 
-nav ul li ul { 
-display:none; /* Rend le menu déroulant caché par défaut */
-} 
- 
-nav ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
-z-index:99999;
-display:list-item !important;
-position:absolute;
-margin-top:5px;
-margin-left:-100px;
-}
- 
-nav ul li:hover ul li {
-float:none;
+nav {
+	margin: auto;
+	padding: 1em 1em;
+	background-color: rgba(30, 28, 95);
+	backdrop-filter: blur(20px);
+	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.206);
+	border-radius: 1em;
+	border: 1px solid rgba(255, 255, 255, 0.21);
 }
 
-
-/* logo au milieu */
-.logo img {
-    height: 45px;
+.nav-links{
+	display: flex;
+	gap: 2em;
 }
 
+.nav-links li, .dropdown li{
+	height: 100%;
+	padding: 0.5em 1em;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+a{
+	color: white;
+}
+
+.dropdown{
+	position: absolute;
+	padding: 1em 0.5em;
+	margin: 0.6em -3em;
+	color: blue;
+	background-color: rgba(0, 0, 0, 0.44);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.209);
+	border-radius: 2em;
+	display: none;
+}
+
+li{
+	border-radius: 1em;
+	transition: 0.3s  ease;
+}
+
+li:hover{
+	background-color: rgba(255, 255, 255, 0.505)
+}
+
+li:hover .dropdown{
+	display: block;
+}
+
+.logo img{
+	height: 30px;
 /* pourcentage */
 
 h2 {
