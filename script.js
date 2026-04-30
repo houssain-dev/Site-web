@@ -84,43 +84,43 @@ document.addEventListener('DOMContentLoaded', createMenu);
 /* pourcentage */
 
  const counters = document.querySelectorAll('.number');
-  let started = false;
+let started = false;
 
-  function animateCounters() {
-    counters.forEach(counter => {
-      const target = +counter.dataset.target;
-      const duration = 1200;
-      const startTime = performance.now();
+function animateCounters() {
+  counters.forEach(counter => {
+    const target = +counter.dataset.target;
+    const duration = 1200;
+    const startTime = performance.now();
 
-      function update(time) {
-        const progress = Math.min((time - startTime) / duration, 1);
+    function update(time) {
+      const progress = Math.min((time - startTime) / duration, 1);
+      
+      const easeOut = 1 - Math.pow(1 - progress, 3);
 
-        const easeOut = 1 - Math.pow(1 - progress, 3);
+      const value = Math.floor(easeOut * target);
 
-        const value = Math.floor(easeOut * target);
-
-        if (target < 1000) {
-          counter.textContent = value + "%";
-        } else {
-          counter.textContent = value;
-        }
-
-        if (progress < 1) {
-          requestAnimationFrame(update);
-        } else {
-          counter.textContent = target < 1000 ? target + "%" : target;
-        }
+      if (target < 1000) {
+        counter.textContent = value + "%";
+      } else {
+        counter.textContent = value;
       }
 
-      requestAnimationFrame(update);
-    });
-  }
-
-  const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !started) {
-      animateCounters();
-      started = true;
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = target < 1000 ? target + "%" : target;
+      }
     }
-  });
 
-  observer.observe(document.querySelector('.stats'));
+    requestAnimationFrame(update);
+  });
+}
+
+const observer = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting && !started) {
+    animateCounters();
+    started = true;
+  }
+});
+
+observer.observe(document.querySelector('.stats'));
