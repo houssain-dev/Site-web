@@ -1,0 +1,106 @@
+/* ── TOPBAR ─────────────────────────────────────────────── */
+.topbar {
+  background: var(--topbar-bg);
+  color: var(--topbar-text);
+  font-size: 0.78rem;
+  padding: 6px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+
+
+
+.menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgb(227, 227, 227);
+}
+
+.logo img {
+    height: 60px;
+}
+
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #0077cc;
+}
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Bloc côte à côte */
+        .row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            
+        }
+
+        .box {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .full-width {
+            background: rgb(120, 141, 255);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Grande image */
+        .image-section {
+            height: 500px;
+            background-image: url('images/truc.png');
+            background-size: cover;
+            border-radius: 0;
+            width: 100%;
+            margin: 0;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+
+.box:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.full-width:first-of-type {
+    background-color: rgb(179, 234, 255);
+}
