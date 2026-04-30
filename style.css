@@ -108,32 +108,6 @@ header {
     align-items: center;
 }
 
-/* barre complète */
-.menu-top {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-/* liens */
-.menu-top a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    transition: 0.3s;
-}
-
-.menu-top a:hover {
-    background-color: rgba(255,255,255,0.2);
-    border-radius: 8px;
-}
-
-/* logo au milieu */
-.logo img {
-    height: 60px;
-}
 
 .image-entete {
     position: relative;
@@ -492,15 +466,5 @@ float:none;
 /* logo au milieu */
 .logo img {
     height: 45px;
-}
-
-header {
-    background-color: rgb(30, 28, 95);
-    color: white;
-    height: 80px;
-    text-align: center;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
 }
 
