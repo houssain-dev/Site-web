@@ -406,6 +406,16 @@ footer {
     transform: scale(1.02);
     transition: 0.3s;
 }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+
 .wrapper {
 	display: flex;
 	font-size: 18px;
