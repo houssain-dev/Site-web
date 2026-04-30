@@ -93,7 +93,7 @@ body {
 }
 
 header {
-    background-color: rgb(123, 151, 168);
+    background-color: rgb(30, 28, 95);
     color: white;
     height: 80px;
     text-align: center;
@@ -409,7 +409,7 @@ footer {
 li {
 list-style:none !important; /*On enlève les puces de la liste */
 color:black;
-padding: 10px 25px;
+padding: 10px 20px;
 font-size:10px;
 text-decoration:none;
 
