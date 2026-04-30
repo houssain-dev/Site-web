@@ -415,8 +415,8 @@ footer {
 li {
 list-style:none !important; /*On enlève les puces de la liste */
 color:black;
-padding: 10px 27px;
-font-size:20px;
+padding: 10px 25px;
+font-size:10px;
 text-decoration:none;
 
 }
