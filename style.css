@@ -11,10 +11,6 @@
   flex-wrap: wrap;
 }
 
-body {
-    font-family: "Optima", sans-serif;
-    margin: 20px;
-}
 #menu-container {
     position: relative;
     display: inline-block;
