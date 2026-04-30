@@ -88,14 +88,13 @@
     </div>
 	<hr>
 <div class="pourcentage">
-  <h2>Lycée en chiffres</h2>
+	<h2>Lycée en chiffres</h2>
 
-  <div class="stats">
-
-    <div class="stat-r">
-      <div class="number" data-target="98">0%</div>
-      <div class="label">De réussite au bac</div>
-    </div>
+	<div class="stat-r">
+		<div class="stat">
+      		<div class="number" data-target="94">0%</div>
+      		<div class="label">De réussite au bac</div>
+   	 </div>
 
     <div class="stat-f">
       <div class="number" data-target="8">0%</div>
@@ -106,10 +105,54 @@
       <div class="number" data-target="1160">0</div>
       <div class="label">Élèves et étudiants</div>
     </div>
-	  
-	<script src="script.js"></script>
+
   </div>
-</body>
-</html>
+
+//Java (doit être ranger)
+<script>
+  const counters = document.querySelectorAll('.number');
+  let started = false;
+
+  function animateCounters() {
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      const duration = 1200;
+      const startTime = performance.now();
+
+      function update(time) {
+        const progress = Math.min((time - startTime) / duration, 1);
+
+        
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+		const value = Math.floor(easeOut * target);
+
+       
+        if (target < 1000) {
+          counter.textContent = value + "%";
+        } else {
+          counter.textContent = value;
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = target < 1000 ? target + "%" : target;
+        }
+      }
+
+      requestAnimationFrame(update);
+    });
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !started) {
+      animateCounters();
+      started = true;
+    }
+  });
+
+  observer.observe(document.querySelector('.stats'));
+</script>
+	
 </body>
 </html>
