@@ -89,24 +89,25 @@
 <div class="pourcentage">
 	<h2>Lycée en chiffres</h2>
 
-	<div class="stat-r">
-		<div class="stat">
-      		<div class="number" data-target="94">0%</div>
-      		<div class="label">De réussite au bac</div>
-   		 </div>
+  <div class="stats">
 
-    	<div class="stat-f">
-      		<div class="number" data-target="8">0%</div>
-      		<div class="label">Formations post-bac</div>
-    	</div>
+    <div class="stat-r">
+      <div class="number" data-target="94">0%</div>
+      <div class="label">De réussite au bac</div>
+    </div>
 
-    	<div class="stat-e">
-      		<div class="number" data-target="1160">0</div>
-      		<div class="label">Élèves et étudiants</div>
-    	</div>
+    <div class="stat-f">
+      <div class="number" data-target="8">0%</div>
+      <div class="label">Formation post-bac</div>
+    </div>
+
+    <div class="stat-e">
+      <div class="number" data-target="1160">0</div>
+      <div class="label">Élèves et étudiants</div>
+    </div>
 
  	 </div>
-	
+
 <script>
   const counters = document.querySelectorAll('.number');
   let started = false;
@@ -120,11 +121,12 @@
       function update(time) {
         const progress = Math.min((time - startTime) / duration, 1);
 
-        
+        // effet d'accélération
         const easeOut = 1 - Math.pow(1 - progress, 3);
-		const value = Math.floor(easeOut * target);
 
-       
+        const value = Math.floor(easeOut * target);
+
+        // Ajout du % uniquement si la valeur est < 1000
         if (target < 1000) {
           counter.textContent = value + "%";
         } else {
@@ -151,6 +153,8 @@
 
   observer.observe(document.querySelector('.stats'));
 </script>
-	
+
+</body>
+</html>
 </body>
 </html>
