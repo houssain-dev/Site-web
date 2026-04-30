@@ -5,66 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lycée Lislet Geoffroy - Accueil</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="menu-container"></div>
+    <script src="script.js"></script>
+    <!-- ──────────────── TOPBAR ──────────────── -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span>📞 0262 907 200</span>
+      <span>✉️ ce.9740054r@ac-reunion.fr</span>
+      <span>📍 15 rue Christol de Sigoyer BP 50002 Sainte-Clotilde CEDEX 97491 La Réunion</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#">in</a>
+      <a href="#">▶</a>
+      <input type="search" placeholder="Recherche…" />
+    </div>
+  </div>
+
     <header>
        <div class="menu-top">
-
-            <a href="#">Établissement</a>
-        	<a href="#">Formations</a>
-        	<a href="#">Vie du lycée</a>
+            <a href="eta.html">Établissement</a>
+            <a href="page3.html">Formations</a>
+            <a href="#">Vie scolaire</a>
         	<div class="logo">
-        	     <img src="Images/Logo.jpg" alt="Logo du lycée Lislet Geoffroy">
+        	     <img src="images/logo_lislet-50aire.webp" alt="Logo du lycée Lislet Geoffroy">
 		</div>
-       		<a href="nouvelle_page.html">Actualités</a>
+       		<a href="page2.html">Actualités</a>
         	<a href="#">Échanges internationaux</a>
-        	<a href="#">Espaces parents</a>
+        	<a href="pourcentage.html">Espace parent</a>
              </div>
     </header>
 
-
-    <!-- Barre de recherche -->
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Rechercher...">
-        <button id="searchBtn" onclick="search()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-            </svg>
-        </button>
-    </div>
-
     <div class="image-entete">
-        <img src="Images/1.jpg" class="slide">
-        <img src="Images/2.jpg" class="slide">
-        <img src="Images/3.jpg" class="slide">
+     <img src="images/image1.webp" class="slide">
+     <img src="images/image2.webp" class="slide">
+     <img src="images/image3.webp" class="slide">
         <div class="bienvenue">
-            <p>Bienvenue au lycée Lislet Geoffroy</p>
+            <p><strong>Bienvenue au lycée Lislet Geoffroy</strong></p>
         </div>
         <div class="texte-introduction">
-            <p>Le lycée Lislet Geoffroy, situé à Saint-Denis de La Réunion, propose des formations variées de la seconde au BTS, alliant excellence académique et ouverture sur le monde professionnel.</p>
+            <p><strong>Le lycée Lislet Geoffroy, situé à Saint-Denis de La Réunion, propose des formations variées de la seconde au BTS, alliant excellence académique et ouverture sur le monde professionnel.</strong></p>
         </div>
     </div>
-
     <hr>
 
     <div class="Partie-millieu">
-        <p>Découvrez nos formations : générale, technologique et professionnelle</p>
+        <h4 class="titrefo">Découvrez nos formations : générale, technologique et professionnelle</h4>
         <div id="image1">
-            <img src="Images/formation-generale.jpg" alt="Formation générale">
-        </div>
+             <img src="images/Copie-de-javier-trueba-iQPr1XkF5F0-unsplash_1200-768x512.webp" alt="Formation générale" class="form1">
+             
+             <h2 class="titrefo">Les cycles pré-bac</h2>
+             <p class="pform">Du tronc commun de Seconde aux spécialités de Terminale, notre lycée propose des parcours adaptés à chaque profil et ambition. Découvrez notre offre en voie générale, ainsi que nos filières scientifiques et technologiques, pour construire un projet scolaire solide et personnalisé.</p> <a href="page3.html">En savoir plus</a>
+         </div>
+
         <div id="image2">
-            <img src="Images/formation-techno.jpg" alt="Formation technologique">    
+             <img src="images/cpge-ptsi2-2-768x768.webp" alt="Formation générale" class="form2">
+             
+             <h2 class="titrefo">Nos formations post-bac</h2>
+             <p class="pform">Nos formations post-bac s’adressent aux bacheliers des troies voies : générale, technologique et professionnelle. Elles facilitent l’insertion dans la vie active ou la poursuite d’études supérieures, notamment en écoles d’ingénieur, grâce à une offre diversifiée et exigeante.</p> <a href="page3.html">En savoir plus</a>
+         </div>
+
+    </div>
+
     <hr>
 
     <div class="pourcentage">
-		<body>
-
-  <h2>Lycée en chiffres</h2>
-
-  <div class="stats">
+      <h2>Nos réussite au Bac</h2>
+      <div class="stats">
 
     <div class="stat">
       <div class="number" data-target="98">0%</div>
@@ -130,41 +138,7 @@
   observer.observe(document.querySelector('.stats'));
 </script>
 
-</body>
-</html>
-        <h2>Nos résultats</h2>
-        <div class="barres">
-            <div class="bloc-barre">
-                <h3>Réussite au Bac</h3>
-                <div class="barre"><div class="barre-remplie" style="height:80%"></div></div>
-            </div>
-            <div class="bloc-barre">
-                <h3>Poursuite d'études</h3>
-                <div class="barre"><div class="barre-remplie" style="height:65%"></div></div>
-            </div>
-            <div class="bloc-barre">
-                <h3>Insertion pro</h3>
-                <div class="barre"><div class="barre-remplie" style="height:90%"></div></div>
-            </div>
         </div>
     </div>
-
-    <div class="carte">Carte 1 : Vie scolaire</div>
-    <div class="carte">Carte 2 : Actualités</div>
-    <div class="carte">Carte 3 : Événements</div>
-    <div class="carte">Carte 4 : Contact</div>
-
-    <footer>
-        <div class="contact">
-            <p>Lycée Lislet Geoffroy - 12 Rue du Lycée, 97400 Saint-Denis</p>
-            <p>Tél : 02 62 90 00 00 | contact@lycee-geoffroy.re</p>
-        </div>
-        <div class="faux-formulaire">
-            <div class="champ"></div>
-            <div class="champ"></div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    </body>
+</body>
 </html>
