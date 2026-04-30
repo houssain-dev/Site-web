@@ -438,3 +438,69 @@ footer {
     transform: scale(1.02);
     transition: 0.3s;
 }
+li {
+list-style:none !important; /*On enlève les puces de la liste */
+color:black;
+padding: 10px 27px;
+font-size:20px;
+text-decoration:none;
+
+}
+ 
+nav ul {
+background-color:blue;
+padding:0;
+margin:0;
+}
+ 
+nav ul li {
+list-style: none;
+line-height:44px;
+float:left;
+background-color:rgba(30, 28, 95);
+}
+ 
+nav ul li a {
+color:white;
+padding:10px;
+font-size:20px;
+text-decoration:none;
+}
+ 
+li a:hover {
+background-color: rgba(255,255,255,0.2);
+border-radius: 8px;
+}
+
+nav ul li ul { 
+display:none; /* Rend le menu déroulant caché par défaut */
+} 
+ 
+nav ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
+z-index:99999;
+display:list-item !important;
+position:absolute;
+margin-top:5px;
+margin-left:-100px;
+}
+ 
+nav ul li:hover ul li {
+float:none;
+}
+
+
+/* logo au milieu */
+.logo img {
+    height: 45px;
+}
+
+header {
+    background-color: rgb(30, 28, 95);
+    color: white;
+    height: 80px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
