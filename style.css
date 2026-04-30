@@ -463,32 +463,40 @@ float:none;
 }
 
 /* pourcentage */
-  h2 {
-    margin-bottom: 50px;
-    font-size: 2.5rem;
-    }
-  .stats {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-    }
-  .stat-r {
-    color:orange
-    }
-  .stat-f {
-    color:bleu
-    }
+
+h2 {
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.stat-r {
+  color:orange
+}
+
+.stat-f {
+  color:bleu
+}
+
   .stat-e {
-    color:bleu
-    }
-  .number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #2c7be5;
-    }
-  .label {
-    margin-top: 10px;
-    color: black
-    }
+  color:bleu
+  }
+
+.number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2c7be5;
+}
+
+.label {
+  margin-top: 10px;
+  color: #555;
+  color:black
+}
 
